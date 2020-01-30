@@ -40,6 +40,8 @@
             this.txtOneParkWithCard = new System.Windows.Forms.TextBox();
             this.txtDaysParking = new System.Windows.Forms.TextBox();
             this.txtCreditRemaining = new System.Windows.Forms.TextBox();
+            this.txtSavings = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -146,11 +148,32 @@
             this.txtCreditRemaining.Size = new System.Drawing.Size(100, 20);
             this.txtCreditRemaining.TabIndex = 11;
             // 
+            // txtSavings
+            // 
+            this.txtSavings.Location = new System.Drawing.Point(243, 311);
+            this.txtSavings.Name = "txtSavings";
+            this.txtSavings.ReadOnly = true;
+            this.txtSavings.Size = new System.Drawing.Size(100, 20);
+            this.txtSavings.TabIndex = 13;
+            this.txtSavings.TextChanged += new System.EventHandler(this.txtSavings_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(27, 318);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Savings with Campus Card";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtSavings);
             this.Controls.Add(this.txtCreditRemaining);
             this.Controls.Add(this.txtDaysParking);
             this.Controls.Add(this.txtOneParkWithCard);
@@ -184,6 +207,8 @@
         private System.Windows.Forms.TextBox txtOneParkWithCard;
         private System.Windows.Forms.TextBox txtDaysParking;
         private System.Windows.Forms.TextBox txtCreditRemaining;
+        private System.Windows.Forms.TextBox txtSavings;
+        private System.Windows.Forms.Label label6;
     }
 }
 
