@@ -31,7 +31,7 @@ namespace Parking_Card_Helper
             bool costOneParkWithCardValid = Double.TryParse(txtOneParkWithCard.Text, out double costOneParkWithCard);
             bool costOneParkNoCardValid = Double.TryParse(txtOneParkNoCard.Text, out double costOneParkNoCard);
 
-            if (creditValid && costOneParkWithCardValid && costOneParkNoCardValid) // check both are valid
+            if (creditValid && costOneParkWithCardValid && costOneParkNoCardValid) // check if all are valid
             {
                 // Calculate number of times user can park, and any remaining credit
                 int daysParking = (int) (creditAdded/costOneParkWithCard);
@@ -43,7 +43,7 @@ namespace Parking_Card_Helper
                 txtCreditRemaining.Text = creditRemaining.ToString("c"); // Use currency formatting
                 txtSavings.Text = totalSavings.ToString("c");
             }
-            else
+            else //if above not successful then display the below messagebox with the error to enter a number
             {
                 MessageBox.Show("Please enter numbers", "Error");
             }
